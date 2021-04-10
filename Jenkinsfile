@@ -1,5 +1,10 @@
 pipeline {
 	agent any
+	
+	tools {
+		maven: My_Maven
+	}	
+
 
 	stages {
 		stage('Build') {
