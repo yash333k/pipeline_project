@@ -24,7 +24,7 @@ pipeline {
 			}
 		}
 		stage('build docker file') {
-                        steps { sh 'sudo docker build -t addressbook:latest .'
+                        steps { sh 'docker build -t addressbook:latest .'
                         }
                 }
 		stage('Tag Doker image') {
