@@ -31,10 +31,6 @@ pipeline {
                         steps { sh 'docker tag addressbook:latest yashyash/adressbook:1.0'
                         }
                 }
-		stage('Tag Doker image') {
-                        steps { sh 'docker tag addressbook:latest yashyash/adressbook:1.0'
-                        }
-                }
 		stage('push Doker image') {
                         steps { 
 				withCredentials([usernamePassword(credentialsId: 'DOCKER_CREDS', passwordVariable: 'DOCKER_HUB_PWD', usernameVariable: 'DOCKER_HUB_USER')]) {
