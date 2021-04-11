@@ -34,7 +34,7 @@ pipeline {
 		stage('push Doker image') {
                         steps { 
 				withCredentials([usernamePassword(credentialsId: 'DOCKER_CREDS', passwordVariable: 'DOCKER_HUB_PWD', usernameVariable: 'DOCKER_HUB_USER')]) {
-				sh 'docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS'
+				sh 'docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PWD'
 				sh 'docker push yashyash/adressbook:1.0'
 				}
 				
