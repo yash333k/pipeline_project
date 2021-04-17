@@ -1,4 +1,3 @@
-Vasista Raja T11:27 AM
 pipeline { 
  agent any 
   stages { 
